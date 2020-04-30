@@ -115,7 +115,7 @@
 }
 
 .contacts-item__link--phone {
-  background-image: url("http://localhost:3000/img/icons/call-answer.svg");
+  background-image: url("../img/icons/call-answer.svg");
   background-position: 9px center;
   background-size: 18px 18px;
 
@@ -131,8 +131,8 @@
 }
 
 .contacts-item__link--email{
-  padding-left: 53px;  
-  background-image: url("http://localhost:3000/img/icons/envelope.svg");
+  padding-left: 53px;
+  background-image: url("../img/icons/envelope.svg");
   background-position: 7px 10px;
   background-size: 23px 15px;
 
@@ -202,7 +202,7 @@
 
 .social-item__icon {
   display: block;  
-  background: url("http://localhost:3000/img/icons/sprites.png") no-repeat;
+  background: url("../img/icons/sprites.png") no-repeat;
 }
 
 .social-item__icon--vk {

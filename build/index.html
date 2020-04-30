@@ -4,14 +4,13 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="preload" href="build/fonts/Roboto.woff2" as="font">
-  <link rel="preload" href="build/fonts/Roboto-medium.woff2" as="font">
-  <link rel="preload" href="build/fonts/Roboto-bold.woff2" as="font">
-  <link rel="preload" href="build/fonts/Roboto-black.woff2" as="font">
-  <link rel="stylesheet" type="text/css" href="build/css/owl.carousel.min.css" />
-  <link rel="stylesheet" href="build/css/owl.theme.default.min.css">
-  <link rel="stylesheet" type="text/css" href="build/css/style.min.css">
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="preload" href="fonts/Roboto.woff2" as="font">
+  <link rel="preload" href="fonts/Roboto-medium.woff2" as="font">
+  <link rel="preload" href="fonts/Roboto-bold.woff2" as="font">
+  <link rel="preload" href="fonts/Roboto-black.woff2" as="font">
+  <link rel="stylesheet" type="text/css" href="css/owl.carousel.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/style.min.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
   <link rel="manifest" href="favicon/site.webmanifest">
@@ -51,19 +50,19 @@
         <nav id="nav-mobile" class="nav header__nav js-header__nav">
           <ul class="nav__list nav__list--header">
             <li class="nav__item nav__item--header">
-              <a class="nav__link" href="#js-skills">Услуги</a>
+              <a class="nav__link js-nav__link" href="#js-skills">Услуги</a>
             </li>
 
             <li class="nav__item nav__item--header">
-              <a class="nav__link" href="#js-portfolio">Портфолио</a>
+              <a class="nav__link js-nav__link" href="#js-portfolio">Портфолио</a>
             </li>
 
             <li class="nav__item nav__item--header">
-              <a class="nav__link" href="#js-prices">Стоимость</a>
+              <a class="nav__link js-nav__link" href="#js-prices">Стоимость</a>
             </li>
 
             <li class="nav__item nav__item--header">
-              <a class="nav__link" href="#modal">Контакты</a>
+              <a class="nav__link js-nav__link" href="#modal">Контакты</a>
             </li>
           </ul>
         </nav>
@@ -189,7 +188,7 @@
                       class="slide__img"
                       src="img/portfolio1-desktop@1x.png"
                       srcset="
-                        /img/portfolio1-desktop@1x.png"
+                        img/portfolio1-desktop@1x.png"
                       alt="Сайт психолога Веры Антоновой">
                   </picture>
                 </a>
@@ -208,15 +207,14 @@
                       media="(min-width: 1201px)"
                       type="image/png"
                       srcset="
-                        /img/portfolio2-desktop@1x.png">
-  
+                        img/portfolio2-desktop@1x.png">
+
                     <source
                       media="(min-width: 1024px)"
                       type="image/png"
                       srcset="
                         img/portfolio2-planshet@1x.png">
-                      
-  
+
                     <source
                       media="(min-width: 320px)"
                       type="image/png"
@@ -227,7 +225,7 @@
                       media="(min-width: 1201px)"
                       type="image/webp"
                       srcset="
-                        /img/portfolio2-desktop@1x.webp">
+                        img/portfolio2-desktop@1x.webp">
   
                     <source
                       media="(min-width: 1024px)"
@@ -247,14 +245,14 @@
                       srcset="
                         img/portfolio2-desktop@1x.png"
                       alt="Сайт магазина детской одежды">
-                      
+
                   </picture>
                 </a>
-  
+
                 <figcaption class="slide__figcaption">
                   <a class="slide__title" href="#">Сайт магазина детской одежды</a>
-                </figcaption>            
-              </figure>            
+                </figcaption>
+              </figure>
             </li>
 
             <li class="slide">
@@ -308,8 +306,8 @@
   
                 <figcaption class="slide__figcaption">
                   <a class="slide__title" href="#">Сайт магазина &#171;Рыболов&#187;</a>
-                </figcaption>            
-              </figure>            
+                </figcaption>
+              </figure>
             </li>
           </ul>
 
@@ -326,16 +324,16 @@
           <ol class="slider__pager">
             <li class="pager-item">
               <button class="pager-item__link pager-item__link--active"
-                type="button" 
-                data-slide-to="1" 
+                type="button"
+                data-slide-to="1"
                 aria-label="Перейти к слайду номер 1">
               </button>
             </li>
 
             <li class="pager-item">
               <button class="pager-item__link"
-                type="button" 
-                data-slide-to="2" 
+                type="button"
+                data-slide-to="2"
                 aria-label="Перейти к слайду номер 2">
               </button>
             </li>
@@ -409,7 +407,7 @@
       <nav class="nav footer__nav">
         <ul class="nav__list nav__list--footer">
           <li class="nav__item nav__item--footer">
-            <a class="nav-link" href="#js-skills">Услуги</a>
+            <a class="nav__link" href="#js-skills">Услуги</a>
           </li>
 
           <li class="nav__item nav__item--footer">
@@ -486,9 +484,9 @@
 
   
 
-  <script src="build/js/jquery-3.4.1.min.js"></script>
-  <script src="build/js/owl.carousel.min.js"></script>
-  <script src="build/js/slider.js"></script>
-  <script src="build/js/main.js" defer></script>
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/slider.js"></script>
+  <script src="js/main.js" defer></script>
 </body>
 </html>

@@ -124,7 +124,7 @@
   }
 
   &--landing {
-    background-image: url("http://localhost:3000/img/icons/tools-and-utensils.svg");
+    background-image: url("../img/icons/tools-and-utensils.svg");
     background-size: 80px 74px;
     @media (max-width: 1023px) {
       flex-basis: 100%;
@@ -134,7 +134,7 @@
 
   &--adaptive {
     flex-basis: 24%;
-    background-image: url("http://localhost:3000/img/icons/responsive.svg");
+    background-image: url("../img/icons/responsive.svg");
     background-size: 79px 74px;
 
     @media (max-width: 1200px) {
@@ -148,7 +148,7 @@
 
   &--frontend {
     flex-basis: 18%;
-    background-image: url("http://localhost:3000/img/icons/programming.svg");
+    background-image: url("../img/icons/programming.svg");
     background-size: 74px 74px;
 
     @media (max-width: 1200px) {
@@ -161,7 +161,7 @@
   }
 
   &--edit {
-    background-image: url("http://localhost:3000/img/icons/coding.svg");
+    background-image: url("../img/icons/coding.svg");
     background-size: 74px 74px;
   }
   @media (max-width: 1023px) {

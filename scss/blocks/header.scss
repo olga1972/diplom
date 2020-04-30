@@ -2,7 +2,7 @@
 @import '../mixins';
 
 .header {
-  background-image: url("http://localhost:3000/img/bg-ellipse.svg");
+  background-image: url("../img/bg-ellipse.svg");
   background-color: $grey-bg;
   background-repeat: no-repeat;
   background-position: calc(50% + 554px) 139px;
@@ -11,15 +11,14 @@
     background-position: calc(50% + 479px) 139px;
   }
   @media (max-width: 1200px) {
-    background-image: url("http://localhost:3000/img/ellipse.planshet.svg");
+    background-image: url("../img/ellipse.planshet.svg");
     background-position: calc(50% + 238px) 192px;
   }
   @media (max-width: 1023px) {
     width: 320px;
     margin: 0 auto;
-    //background-color: linear-gradient(180deg, $grey-bg 50%, $white 50%);
     background: linear-gradient(180deg, $grey-bg 50%, $white 50%);
-    background-image: url("http://localhost:3000/img/ellipse.mobile.svg");
+    background-image: url("../img/ellipse.mobile.svg");
     background-position: 0 174px;
     background-repeat: no-repeat;
   }  
@@ -168,7 +167,7 @@
     width: 45px;
     height: 32px;
     background: transparent;
-    background-image: url("http://localhost:3000/img/icons/burger.svg");
+    background-image: url("../img/icons/burger.svg");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: 45px 32px;
@@ -233,7 +232,7 @@
 }
 
 .nav-open .header__button{
-    background: url("http://localhost:3000/img/icons/close.png") center center no-repeat;
+    background: url("../img/icons/close.png") center center no-repeat;
     background-size: contain;
   }
 
@@ -288,7 +287,7 @@
     height: 26px;
     padding: 0;    
     font-size: 0;
-    background-image: url("http://localhost:3000/img/icons/call-answer.svg");
+    background-image: url("../img/icons/call-answer.svg");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: 11px 11px;

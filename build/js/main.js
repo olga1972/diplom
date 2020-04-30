@@ -10,21 +10,14 @@ const sectionSkillsElement = document.getElementById('js-skills');
 const sectionPortfolioElement = document.getElementById('js-portfolio');
 const sectionPricesElement = document.getElementById('js-prices');
 
-const navLinksElement= document.querySelectorAll('.nav__link');
+const navLinksElement= document.querySelectorAll('.js-nav__link');
 const navLinksArray = Array.from(navLinksElement); //преобразуем в массив
-
-
-
 
 
 //Навешиваем событие на кнопку разворачивая меню
 btnBurgerElement.addEventListener('click', onBtnShowMenuElemClick);
 
 menuListElement.addEventListener('click', handleLinkClick);
-
-//Навешиваем событие при загрузке страницы и изменении ширины окна
-//window.addEventListener('load', checkViewPortUser);
-//window.addEventListener('resize', checkViewPortUser);
 
 //Функция показа/скрытия меню
 function onBtnShowMenuElemClick() {
@@ -65,6 +58,7 @@ function handleLinkClick(e) {
     }
 
     window.scrollBy({ top: coordsSection, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
 
     navLinksArray.forEach(function(v, i, arr) {
         if(arr[i] !== e.target) {
