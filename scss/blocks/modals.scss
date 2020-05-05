@@ -1,17 +1,17 @@
 @import '../variables';
 
 .modal {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 400px;
-    max-width: 100%;
-    height: 400px;
-    max-height: 100%;
-    padding: 26px;
-    z-index: 1000;
-    background-color: #ffffff;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 1000;
+  width: 400px;
+  max-width: 100%;
+  height: 400px;
+  max-height: 100%;
+  padding: 26px;
+  background-color: #ffffff;
+  transform: translate(-50%, -50%);
 
     @media (max-width: 768px) {
       width: 300px;
@@ -19,10 +19,10 @@
 }
 
   .modal-overlay {
-    z-index: 900;
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 900;
     width: 100%;
     height: 100%;
     background: rgba(0,0,0,0.6);
@@ -49,9 +49,9 @@
   }
 
   .fieldset {
-    border: none;
     padding: 0;
     margin-bottom: 40px;
+    border: none;
   }
 
   .text-input {

@@ -11,6 +11,7 @@
   @media (max-width: 1200px) {
     padding: 75px 0 53px 0;
   }
+
   @media (max-width: 1023px) {
     width: 320px;
     padding-top: 40px;
@@ -39,6 +40,7 @@
     font-size: 26px;
     transform: translateX(523px) translateY(208px) rotate(20deg);
   }
+
   @media (max-width: 1023px) {
     display: none;
   }
@@ -47,6 +49,7 @@
 .prices__elements--hash {
   transform: translateX(252px) translateY(175px) rotate(15deg);
   font-size: 60px;
+
   @media (max-width: 1540px) {
     display: none;
   }
@@ -67,6 +70,7 @@
   @media (max-width: 1330px) {
     transform: translateX(865px) translateY(220px) rotate(-23deg);
   }
+
   @media (max-width: 1023px) {
     display: none;
   }
@@ -99,6 +103,7 @@
     z-index: 10;
     color: black;
   }
+
   @media (max-width: 1023px) {
     display: none;
   }
@@ -112,14 +117,11 @@
     transform: translateX(170px) translateY(-65px) rotate(28deg);
     font-size: 34px;
   }
+
   @media (max-width: 1023px) {
     display: none;
   }
-
 }
-
-
-
 
 .prices__container {
   padding-left: 130px;
@@ -129,6 +131,7 @@
     padding-left: 40px;
     padding-right: 35px;
   }
+
   @media (max-width: 1023px) {
     padding-left: 20px;
   }
@@ -151,24 +154,23 @@
     }
   }
 
-
   @media (max-width: 1200px) {
     display: block;
     margin: 0 auto;
     margin-bottom: 29px;
     font-size: 45px;
     font-weight: 700;
-    line-height: 60px; 
+    line-height: 60px;
   }
+
   @media (max-width: 1023px) {
     width: 280px;
     margin-bottom: 32px;
     padding: 0;
     font-size: 28px;
     line-height: 40px;
-  } 
+  }
 }
-
 
 .prices__text--small {
   text-indent: -16px;
@@ -183,9 +185,8 @@
 
     @media (max-width: 1023px) {
       display: block;
-    }     
+    }
   }
-
 
   @media (max-width: 1200px) {
     padding-left: 14px;
@@ -193,13 +194,14 @@
     line-height: 28px;
     letter-spacing: -0.1px;
   }
+
   @media (max-width: 1023px) {
     width: 280px;
     margin-bottom: 0;
     padding-right: 5px;
     padding-left: 14px;
     font-size: 18.75px;
-    text-indent: -11px;  
+    text-indent: -11px;
     line-height: 29px;
   }
 }

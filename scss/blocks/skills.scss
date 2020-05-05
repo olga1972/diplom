@@ -6,7 +6,6 @@
     transform: translateX(171px) translateY(155px) rotate(30deg);
     font-size: 34px;
   }
-
 }
 
 .main {
@@ -24,10 +23,11 @@
   @media (max-width: 1200px) {
     padding-top: 103px;
   }
+
   @media (max-width: 1023px) {
     padding-top: 0;
     padding-bottom: 22px;
-  } 
+  }
 }
 
 .title {
@@ -42,16 +42,17 @@
   }
 }
 
-.skills__title {  
+.skills__title {
   margin-bottom: 105px;
 
   @media (max-width: 1200px) {
     margin-bottom: 104px;
   }
+
   @media (max-width: 1023px) {
     padding-top: 0;
-    margin-bottom: 20px; 
-  } 
+    margin-bottom: 20px;
+  }
 }
 
 .skills-list {
@@ -67,6 +68,7 @@
     width: 700px;
     margin-bottom: 92px;
   }
+
   @media (max-width: 1023px) {
     justify-content: flex-start;
     width: 280px;
@@ -86,7 +88,7 @@
   text-align: center;
   color: $grey-text;
   background-repeat: no-repeat;
-  background-position: center top;  
+  background-position: center top;
   flex-basis: 22%;
 
   @media (max-width: 1200px) {
@@ -95,8 +97,9 @@
     margin-bottom: 77px;
     margin-right: 0;
     padding-top: 93px;
-    padding-right: 5px; 
+    padding-right: 5px;
   }
+
   @media (max-width: 1023px) {
     flex-direction: column;
     flex-basis: 100%;
@@ -108,12 +111,12 @@
   }
 
   &:last-child {
-    margin-right: 0;  
+    margin-right: 0;
   }
 
   &:nth-last-child(-n+2) {
     @media (max-width: 1200px) {
-      margin-bottom: 0; 
+      margin-bottom: 0;
     }
   }
 
@@ -126,6 +129,7 @@
   &--landing {
     background-image: url("../img/icons/tools-and-utensils.svg");
     background-size: 80px 74px;
+
     @media (max-width: 1023px) {
       flex-basis: 100%;
       background-size: 61px 56px;
@@ -164,6 +168,7 @@
     background-image: url("../img/icons/coding.svg");
     background-size: 74px 74px;
   }
+
   @media (max-width: 1023px) {
     flex-basis: 100%;
     background-size: 61px 56px;
@@ -176,6 +181,7 @@
   @media (max-width: 1200px) {
     margin-bottom: auto;
   }
+
   @media (max-width: 1023px) {
     margin: 0;
     padding-top: 16px;
@@ -190,6 +196,7 @@
   @media (max-width: 1200px) {
     padding: 24px 84px;
   }
+
   @media (max-width: 1023px) {
     padding: 18px 72px;
     font-size: $font-size;

@@ -10,11 +10,12 @@
     padding-top: 107px;
     padding-bottom: 101px;
   }
+
   @media (max-width: 1023px) {
     width: 320px;
     margin: 0 auto;
     padding-top: 44px;
-    padding-bottom: 53px; 
+    padding-bottom: 53px;
   }
 }
 
@@ -24,6 +25,7 @@
   @media (max-width: 1200px) {
     margin-bottom: 114px;
   }
+
   @media (max-width: 1023px) {
     margin: 0 auto;
     margin-bottom: 42px;
@@ -40,8 +42,9 @@
 
   @media (max-width: 1200px) {
     width: 945px;
-    margin-bottom: 90px; 
+    margin-bottom: 90px;
   }
+
   @media (max-width: 1023px) {
     width: 280px;
     margin-bottom: 35px;
@@ -58,6 +61,7 @@
     width: 945px;
     margin-bottom: 59px;
   }
+
   @media (max-width: 1023px) {
     width: 280px;
     min-height: 292px;
@@ -92,6 +96,7 @@
     width: 455px;
     margin-right: 34px;
   }
+
   @media (max-width: 1023px) {
     width: 280px;
   }
@@ -113,6 +118,7 @@
     padding: 10px 27px;
     text-align: left;
   }
+
   @media (max-width: 1023px) {
     width: 280px;
     padding: 0;
@@ -148,6 +154,7 @@
     min-width: 455px;  /*если картинка не загрузится*/
     margin-bottom: 10px;
   }
+
   @media (max-width: 1023px) {
     width: 100%;
     min-height: 252px; /*если картинка не загрузится*/
@@ -197,7 +204,6 @@
 
 .slider__pager {
   display: none;
-  
 
   @media (max-width: 1200px) {
     width: 945px;
@@ -205,8 +211,8 @@
     margin: 0;
     justify-content: center;
     padding-left: 0;
-    
   }
+
   @media (max-width: 1023px) {
     width: 280px;
     padding: 5px 0;
@@ -220,6 +226,7 @@
   @media (max-width: 1200px) {
     padding: 25px 90px 23px 90px;
   }
+
   @media (max-width: 1023px) {
     padding: 18px 77px;
     font-size: 16px;
@@ -231,6 +238,7 @@
     margin-right: 30px;
     list-style-type: none;
   }
+
   @media (max-width: 1023px) {
     margin-right: 16px;
   }
@@ -251,6 +259,7 @@
     border-radius: 50%;
     background-color: #ebebeb;
   }
+
   @media (max-width: 1023px) {
     width: 10px;
     height: 10px;

@@ -76,6 +76,9 @@ const inputNameElement = document.querySelector('.js-name');
 const inputTelElement = document.querySelector('.js-tel');
 const inputEmailElement = document.querySelector('.js-email');
 
+Inputmask({"mask": "+7(999) 999 - 9999"}).mask(inputTelElement);
+
+
 btnsOpenModal.forEach(function(item, i, arr){
     item.addEventListener('click', showModal);
 });
