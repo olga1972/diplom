@@ -188,7 +188,14 @@
   border: none;
   z-index: 10;
   top: 122px;
+  outline: none;
+
+  &:focus {
+    box-shadow: 0 0 4px $grey-text;
+  }
 }
+
+
 
 .controls-item__btn--prev {
   left: -30px;

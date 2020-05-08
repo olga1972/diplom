@@ -9,6 +9,9 @@
 }
 
 .main {
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  
   @media (max-width: 1023px) {
     width: 320px;
     margin: 0 auto;
@@ -167,11 +170,11 @@
   &--edit {
     background-image: url("../img/icons/coding.svg");
     background-size: 74px 74px;
-  }
 
-  @media (max-width: 1023px) {
-    flex-basis: 100%;
-    background-size: 61px 56px;
+    @media (max-width: 1023px) {
+      flex-basis: 100%;
+      background-size: 61px 56px;
+    }
   }
 }
 

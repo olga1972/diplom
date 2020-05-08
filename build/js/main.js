@@ -3,7 +3,8 @@ document.body.classList.remove('no-js');
 //Создание переменных
 
 //Элементы меню
-const menuListElement = document.querySelector('.js-header__nav');
+const menuListHeaderElement = document.querySelector('.js-header__nav');
+const menuListFooterElement = document.querySelector('.js-footer__nav');
 const btnBurgerElement = document.querySelector('.js-header__button');
 
 const sectionSkillsElement = document.getElementById('js-skills');
@@ -17,7 +18,8 @@ const navLinksArray = Array.from(navLinksElement); //преобразуем в �
 //Навешиваем событие на кнопку разворачивая меню
 btnBurgerElement.addEventListener('click', onBtnShowMenuElemClick);
 
-menuListElement.addEventListener('click', handleLinkClick);
+menuListHeaderElement.addEventListener('click', handleLinkClick);
+menuListFooterElement.addEventListener('click', handleLinkClick);
 
 //Функция показа/скрытия меню
 function onBtnShowMenuElemClick() {
@@ -36,10 +38,10 @@ function onBtnShowMenuElemClick() {
     }
 }
 
+//Навигация по странице + скролл
+
 function handleLinkClick(e) {
     e.preventDefault();
-
-    e.target.classList.add('nav__link--active');
 
     let coordsSection;
 
@@ -57,8 +59,12 @@ function handleLinkClick(e) {
         e.target.classList.add('nav__link--active');
     }
 
-    window.scrollBy({ top: coordsSection, behavior: 'smooth' });
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    const scrollOptions = {
+    top: coordsSection,
+    behavior: 'smooth'
+    }
+
+    window.scrollTo(scrollOptions);
 
     navLinksArray.forEach(function(v, i, arr) {
         if(arr[i] !== e.target) {
@@ -67,16 +73,22 @@ function handleLinkClick(e) {
     });
 }
 
-const modal = document.querySelector("#modal");
-const modalOverlay = document.querySelector("#modal-overlay");
+//Модальное окно
+
+const modal = document.querySelector('#modal');
+const modalSuccess = document.querySelector('#modal-success');
+const modalOverlay = document.querySelector('#modal-overlay');
 const btnCloseModal = document.querySelector('.js-btn-closed');
-const btns = document.querySelectorAll(".js-btn");
+const btnSubmitFormModal = document.querySelector('.js-btn-submit');
+const btns = document.querySelectorAll('.js-btn');
 const btnsOpenModal = Array.from(btns);
 const inputNameElement = document.querySelector('.js-name');
 const inputTelElement = document.querySelector('.js-tel');
 const inputEmailElement = document.querySelector('.js-email');
 
 Inputmask({"mask": "+7(999) 999 - 9999"}).mask(inputTelElement);
+
+btnSubmitFormModal.addEventListener('click', showModalSuccess);
 
 
 btnsOpenModal.forEach(function(item, i, arr){
@@ -85,7 +97,7 @@ btnsOpenModal.forEach(function(item, i, arr){
 
 btnCloseModal.addEventListener('click', closeModal);
 
-function showModal (e) { 
+function showModal (e) {
 
     if(e.target.classList.contains('js-btn-call')) {
         inputTelElement.previousElementSibling.innerHTML = '&#42; Телефон:';
@@ -99,22 +111,102 @@ function showModal (e) {
         inputEmailElement.setAttribute('required','required');
         inputEmailElement.previousElementSibling.style.display = 'block';
     }
-    modal.setAttribute('aria-hidden', 'false')
-    modal.classList.toggle('closed');
-    modalOverlay.classList.toggle('closed');
+    modal.setAttribute('aria-hidden', 'false');
+    modal.classList.remove('hide');
+    modal.classList.add('show');
+    modalOverlay.classList.remove('hide');
+    modalOverlay.classList.add('show');
+
+    setTimeout(function() {
+        inputNameElement.focus();
+    }, 900);
 
     document.body.classList.add('modal-active');
-
-    inputNameElement.focus();
 }
 
 function closeModal () {
-    modal.setAttribute('aria-hidden', 'true')
-    modal.classList.toggle('closed');
-    modalOverlay.classList.toggle('closed');
+    modal.setAttribute('aria-hidden', 'true');
+    modal.classList.remove('show');
+    modal.classList.add('hide');
+    modalOverlay.classList.remove('show');
+    modalOverlay.classList.add('hide');
 
     document.body.classList.remove('modal-active');
 }
+
+function showModalSuccess () {
+    /* const request = new XMLHttpRequest();
+
+    request.open("POST", "mail.php");
+    request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+    const name = inputNameElement.value;
+    const tel = inputTelElement.value;
+    const email = inputEmailElement.value; */
+    
+    console.log('отправлено');
+    modalSuccess.setAttribute('aria-hidden', 'true');
+    modalSuccess.classList.remove('show');
+    modalSuccess.classList.add('hide');
+}
+
+
+
+
+$(document).ready(function(){
+    //$('input[type="tel"]').inputmask({ "mask": "+7 (999) 999-9999" }); //specifying options
+
+
+    
+
+    $('.modal__form').each(function () {
+        $(this).validate({
+            errorPlacement(error, element) {
+                return true;
+            },
+            focusInvalid: false,
+            rules: {
+                fullName: {
+                    required: true,
+                    minlength: 4,
+                },
+                tel: {
+                    required: true,
+                },
+                email: {
+                    required: true,
+                    email: true
+                }
+            },
+            messages: {
+                fullName: {
+                    required: 'Вы не ввели имя',
+                    minlength: 'Нужно ввести минимум 5 букв'
+                },
+                tel: {
+                    required: 'Вы не ввели номер телефона'
+                },
+                email: {
+                    required: 'Вы не ввели email'
+                }
+            },
+            submitHandler(form) {
+            let th = $(form);
+
+            $.ajax({
+            type: 'POST',
+            url: 'mail.php',
+            data: th.serialize(),
+        }).done(() => {
+
+            th.trigger('reset');
+        });
+
+        return false;
+        }
+    });
+    });
+    $('.modal__form').validate();
+});
 
 
 

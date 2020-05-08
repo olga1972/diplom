@@ -12,6 +12,8 @@
   padding: 26px;
   background-color: #ffffff;
   transform: translate(-50%, -50%);
+  opacity: 0;
+  
 
     @media (max-width: 768px) {
       width: 300px;
@@ -40,6 +42,20 @@
     display: block;
   }
 
+  .hide {
+    //display: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 2s;
+  }
+
+  .show {
+    //display: block;
+    opacity: 1;
+    visibility: visible;
+    transition: all 2s;
+  }
+
   .modal__form {
     position: relative;
     display: flex;
@@ -64,3 +80,6 @@
     outline: 2px solid $pink;
   }
 
+  .error {
+    background-color: red;
+  }
