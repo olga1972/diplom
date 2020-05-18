@@ -128,7 +128,7 @@ gulp.task('serve', function () {
 });
 
 gulp.task('copy', function () {
-   return gulp.src(['fonts/**','img/**', 'favicon/**', 'js/**', 'css/**', '*.html'], {
+   return gulp.src(['fonts/**','img/**', 'favicon/**', 'js/**', 'css/**', '*.html', '*.php', 'PHPMailer/**'], {
             base: '.'
         })
             .pipe(gulp.dest('build'))

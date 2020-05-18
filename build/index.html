@@ -374,25 +374,24 @@
     </section>
   </main>
 
-  <div class="modal hide" id="modal" role="dialog" aria-labelledby="modal__title" aria-describedby="modal__description" aria-hidden="true">
+  <div class="modal hide js-modal" id="modal" role="dialog" aria-labelledby="modal__title" aria-describedby="modal__description" aria-hidden="true">
     <h2 id="modal__title" class="modal__title">Форма обратной связи</h2>
 
-    <p id="modal__description" class="visually-hidden">Оставьте свое имя, фамилию и телефон для связи.</p>
+    <p id="modal__description" class="visually-hidden">Оставьте свое имя, фамилию, адрес электронной почты и телефон для связи.</p>
 
-    <form class="modal__form" name="test" method="post" enctype="multipart/form-data" action="mail.php">
-      <input type="hidden" name="project_name" value="сайт-портфолио">
-        <input type="hidden" name="admin_email" value="olga.sadyreva@mail.ru">
+    <form class="modal__form" name="test" method="post" enctype="multipart/form-data">
+        <input type="hidden" name="admin_email[]" value="olga.sadyreva@mail.ru">
         <input type="hidden" name="form_subject" value="Заявка с сайта-портфолио">
 
       <fieldset class="fieldset">
         <label for="fullName">&#42; Фамилия, имя:</label>
-        <input class="text-input js-name" id="fullName" type="text" size="40" name="fullName" required autofocus tabindex="-1">
+        <input class="text-input js-name js-validate-error-field" id="fullName" type="text" size="40" name="fullName" tabindex="-1" data-validate-field="fullName">
 
         <label for="tel">Телефон:</label>
-        <input class="text-input js-tel" id="tel" type="tel" name="tel" placeholder="+7 (___) ___-__-__">
+        <input class="text-input js-tel js-validate-error-field" id="tel" type="tel" name="tel" placeholder="+7 (___) ___-__-__" data-validate-field="tel">
 
         <label for="email">&#42; Адрес электронной почты:</label>
-        <input class="text-input js-email" id="email" type="email" size="40" name="email">
+        <input class="text-input js-email js-validate-error-field" id="email" type="email" size="40" name="email" data-validate-field="email">
       </fieldset>
 
       <button class="modal__btn js-btn-submit" type="submit">Отправить</button>
@@ -401,7 +400,30 @@
     </form>
   </div>
 
-  <div class="modal hide" id="modal-success" role="dialog" aria-labelledby="modal__title" aria-hidden="true">
+  <div class="modal modal--call hide js-modal-call" id="modal-call" role="dialog" aria-labelledby="modal__title" aria-describedby="modal__description" aria-hidden="true">
+    <h2 id="modal__title" class="modal__title">Заказать звонок</h2>
+
+    <p id="modal__description" class="visually-hidden">Оставьте свое имя, фамилию и телефон для связи.</p>
+
+    <form class="modal__form modal__form--call" name="test" method="post" enctype="multipart/form-data">
+        <input type="hidden" name="admin_email[]" value="olga.sadyreva@mail.ru">
+        <input type="hidden" name="form_subject" value="Заказ звонка с сайта-портфолио">
+
+      <fieldset class="fieldset">
+        <label for="name">&#42; Фамилия, имя:</label>
+        <input class="text-input js-name js-validate-error-field" id="name" type="text" size="40" name="fullName" tabindex="-1" data-validate-field="fullName">
+
+        <label for="phone">&#42; Телефон:</label>
+        <input class="text-input js-tel js-validate-error-field" id="phone" type="tel" name="tel" placeholder="+7 (___) ___-__-__" data-validate-field="tel">
+      </fieldset>
+
+      <button class="modal__btn js-btn-submit" type="submit">Отправить</button>
+
+      <button class="modal__btn js-btn-closed" id="close-button" type="reset">Отмена</button>
+    </form>
+  </div>
+
+  <div class="hide modal modal--success" id="modal-success" role="dialog" aria-labelledby="modal__title" aria-hidden="true">
     <h2 id="modal__title" class="modal__title">Ваша заявка отправлена!</h2>
 
     <button class="modal__btn js-btn-closed" id="close-button" type="reset">Закрыть</button>
@@ -492,8 +514,8 @@
   <script src="js/jquery-3.4.1.min.js"></script>
   <script src="js/owl.carousel.min.js"></script>
   <script src="js/slider.js"></script>
+  <script src="js/just-validate.min.js"></script>
   <script src="js/inputmask.min.js"></script>
-  <script src="js/jquery.validate.min"></script>
   <script src="js/main.js" defer></script>
 </body>
 </html>
