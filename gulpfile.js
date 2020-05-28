@@ -1,6 +1,9 @@
 'use strict';
 
 const gulp = require('gulp');
+const webpack = require('webpack');
+const webpackStream = require('webpack-stream');
+const webpackConfig = require('./webpack.config.js');
 const sass = require('gulp-sass');
 const plumber = require('gulp-plumber');
 const autoprefixer = require('gulp-autoprefixer');
@@ -43,6 +46,7 @@ gulp.task('html', function () {
 
 gulp.task('js', function () {
     return gulp.src('js/**/*.js')
+        .pipe(webpackStream(webpackConfig), webpack)
         .pipe(gulp.dest('build/js'))
         .pipe(browserSync.reload({
             stream: true

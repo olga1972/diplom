@@ -43,6 +43,16 @@
   transform: none;
   margin: 20px auto;
   display: block;
+  opacity: 1;
+  visibility: visible;
+}
+
+.no-js .modal--call {
+  display: none;
+}
+
+.no-js .modal--success {
+  display: none;
 }
 
 .no-js .modal-overlay {

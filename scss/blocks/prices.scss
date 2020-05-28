@@ -2,6 +2,7 @@
 @import '../mixins';
 
 .prices {
+  width: 100%;
   position: relative;
   margin: 0 auto;
   padding: 75px 0 49px 0;
@@ -13,7 +14,8 @@
   }
 
   @media (max-width: 1023px) {
-    width: 320px;
+    width: 100%;
+    min-width: 320px;
     padding-top: 40px;
     padding-bottom: 38px;
   }
@@ -21,11 +23,12 @@
 
 .prices__elements {
   transform-origin: 0 0;
+  //transform-origin: 50% 50%;
 }
 
 .prices__elements--braces {
-  transform: translateX(1759px) translateY(192px) rotate(-18deg);
-  font-size: 52px;
+  transform: translateX(1750px) translateY(192px) rotate(-19deg);
+  font-size: 50px;
 
   @media (max-width: 1830px) {
     display: none;
@@ -47,7 +50,7 @@
 }
 
 .prices__elements--hash {
-  transform: translateX(252px) translateY(175px) rotate(15deg);
+  transform: translateX(244px) translateY(175px) rotate(15deg);
   font-size: 60px;
 
   @media (max-width: 1540px) {
@@ -56,7 +59,8 @@
 }
 
 .prices__elements--slash {
-  transform: translateX(1648px) translateY(8px) rotate(-23deg);
+  //display: none;
+  transform: translateX(1641px) translateY(8px) rotate(-23deg);
   font-size: 40px;
 
   @media (max-width: 1725px) {
@@ -77,7 +81,7 @@
 }
 
 .prices__elements--div2 {
-  transform: translateX(1435px) translateY(206px) rotate(20deg);
+  transform: translateX(1427px) translateY(207px) rotate(20deg);
   font-size: 38px;
 
   @media (max-width: 1550px) {
@@ -110,8 +114,8 @@
 }
 
 .prices__elements--braces2 {
-  transform: translateX(144px) translateY(-22px) rotate(28deg);
-  font-size: 50px;
+  transform: translateX(137px) translateY(-22px) rotate(28deg);
+  font-size: 49px;
 
   @media (max-width: 1300px) {
     transform: translateX(170px) translateY(-65px) rotate(28deg);
@@ -133,6 +137,14 @@
   }
 
   @media (max-width: 1023px) {
+    //width: 100%;
+    //min-width: 320px;
+    //padding-left: 20px;
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+    min-width: 320px;
     padding-left: 20px;
   }
 }
@@ -150,6 +162,9 @@
     display: none;
 
     @media (max-width: 1023px) {
+      //display: block;
+    }
+    @media (max-width: 768px) {
       display: block;
     }
   }
@@ -164,7 +179,7 @@
   }
 
   @media (max-width: 1023px) {
-    width: 280px;
+    min-width: 280px;
     margin-bottom: 32px;
     padding: 0;
     font-size: 28px;
@@ -184,7 +199,11 @@
     display: none;
 
     @media (max-width: 1023px) {
-      display: block;
+      //display: block;
+    }
+
+    @media (max-width: 768px) {
+      display: none;
     }
   }
 
@@ -196,7 +215,7 @@
   }
 
   @media (max-width: 1023px) {
-    width: 280px;
+    min-width: 280px;
     margin-bottom: 0;
     padding-right: 5px;
     padding-left: 14px;

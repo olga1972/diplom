@@ -4,7 +4,7 @@ $(document).ready(function(){
   owl.owlCarousel({
     items: 3,
     autoWidth: true,
-    margin: 30,
+    margin: 35,
     loop: true,
     navText: [],
     nav: true,
@@ -24,7 +24,6 @@ $(document).ready(function(){
             items: 2,
             dots: true,
             onDragged: callback,
-            margin: 35,
         },
         1025: {
           items: 3,

@@ -12,7 +12,7 @@
   }
 
   @media (max-width: 1023px) {
-    width: 320px;
+    min-width: 320px;
     margin: 0 auto;
     padding-top: 44px;
     padding-bottom: 53px;
@@ -46,6 +46,11 @@
   }
 
   @media (max-width: 1023px) {
+    width: 455px;
+    //margin-bottom: 35px;
+  }
+
+  @media (max-width: 768px) {
     width: 280px;
     margin-bottom: 35px;
   }
@@ -63,6 +68,11 @@
   }
 
   @media (max-width: 1023px) {
+    width: 455px;
+    margin-bottom: 59px;
+  }
+
+  @media (max-width: 768px) {
     width: 280px;
     min-height: 292px;
     margin-bottom: 24px;
@@ -87,7 +97,7 @@
   }
 
   &:nth-child(n + 2) {
-    @media (max-width: 1023px) {
+    @media (max-width: 768px) {
       display: none;
     }
   }
@@ -97,7 +107,11 @@
     margin-right: 34px;
   }
 
-  @media (max-width: 1023px) {
+  @media (max-width: 1000px) {
+    //width: 400px;
+  }
+
+  @media (max-width: 768px) {
     width: 280px;
   }
 }
@@ -106,7 +120,7 @@
 .slide__figure {
   @include reset;
 
-  @media (max-width: 1023px) {
+  @media (max-width: 768px) {
     width: 280px;
   }
 }
@@ -119,7 +133,7 @@
     text-align: left;
   }
 
-  @media (max-width: 1023px) {
+  @media (max-width: 768px) {
     width: 280px;
     padding: 0;
     text-align: center;
@@ -136,7 +150,7 @@
   @media (max-width: 1200px) {
     font-size: 25px;
   }
-  @media (max-width: 1023px) {
+  @media (max-width: 768px) {
     min-width: 280px;
     font-size: 18px;
   }
@@ -155,7 +169,14 @@
     margin-bottom: 10px;
   }
 
-  @media (max-width: 1023px) {
+  @media (max-width: 1000px) {
+    //width: 100%;
+    min-height: 275px; /*если картинка не загрузится*/
+    min-width: 350px;  /*если картинка не загрузится*/
+    margin-bottom: 12px;
+  }
+
+  @media (max-width: 768px) {
     width: 100%;
     min-height: 252px; /*если картинка не загрузится*/
     min-width: 280px;  /*если картинка не загрузится*/
@@ -221,6 +242,11 @@
   }
 
   @media (max-width: 1023px) {
+    width: 455px;
+    padding: 5px 0;
+  }
+
+  @media (max-width: 768px) {
     width: 280px;
     padding: 5px 0;
   }
@@ -234,7 +260,7 @@
     padding: 25px 90px 23px 90px;
   }
 
-  @media (max-width: 1023px) {
+  @media (max-width: 768px) {
     padding: 18px 77px;
     font-size: 16px;
   }
@@ -246,7 +272,7 @@
     list-style-type: none;
   }
 
-  @media (max-width: 1023px) {
+  @media (max-width: 768px) {
     margin-right: 16px;
   }
 
@@ -267,7 +293,7 @@
     background-color: #ebebeb;
   }
 
-  @media (max-width: 1023px) {
+  @media (max-width: 768px) {
     width: 10px;
     height: 10px;
   }
