@@ -8,8 +8,8 @@
   <link rel="preload" href="fonts/Roboto-medium.woff2" as="font">
   <link rel="preload" href="fonts/Roboto-bold.woff2" as="font">
   <link rel="preload" href="fonts/Roboto-black.woff2" as="font">
-  <link rel="stylesheet" type="text/css" href="css/owl.carousel.min.css" />
-  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" type="text/css" href="css/style.min.css">
   <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
@@ -400,33 +400,33 @@
     </form>
   </div>
 
-  <div class="modal modal--call hide js-modal-call" id="modal-call" role="dialog" aria-labelledby="modal__title" aria-describedby="modal__description" aria-hidden="true">
-    <h2 id="modal__title" class="modal__title">Заказать звонок</h2>
+  <div class="modal modal--call hide js-modal-call" id="modal-call" role="dialog" aria-labelledby="modal__title--call" aria-describedby="modal__description--call" aria-hidden="true">
+    <h2 id="modal__title--call" class="modal__title">Заказать звонок</h2>
 
-    <p id="modal__description" class="visually-hidden">Оставьте свое имя, фамилию и телефон для связи.</p>
+    <p id="modal__description--call" class="visually-hidden">Оставьте свое имя, фамилию и телефон для связи.</p>
 
     <form class="modal__form modal__form--call" name="test" method="post" enctype="multipart/form-data">
         <input type="hidden" name="admin_email[]" value="olga.sadyreva@mail.ru">
         <input type="hidden" name="form_subject" value="Заказ звонка с сайта-портфолио">
 
       <fieldset class="fieldset">
-        <label for="name">&#42; Фамилия, имя:</label>
-        <input class="text-input js-name js-validate-error-field" id="name" type="text" size="40" name="fullName" tabindex="-1" data-validate-field="fullName">
+        <label for="name-call">&#42; Фамилия, имя:</label>
+        <input class="text-input js-name js-validate-error-field" id="name-call" type="text" size="40" name="fullName" tabindex="-1" data-validate-field="fullName">
 
-        <label for="phone">&#42; Телефон:</label>
-        <input class="text-input js-tel js-validate-error-field" id="phone" type="tel" name="tel" placeholder="+7 (___) ___-__-__" data-validate-field="tel">
+        <label for="phone-call">&#42; Телефон:</label>
+        <input class="text-input js-tel js-validate-error-field" id="phone-call" type="tel" name="tel" placeholder="+7 (___) ___-__-__" data-validate-field="tel">
       </fieldset>
 
       <button class="modal__btn js-btn-submit" type="submit">Отправить</button>
 
-      <button class="modal__btn js-btn-closed" id="close-button" type="reset">Отмена</button>
+      <button class="modal__btn js-btn-closed" id="close-button-call" type="reset">Отмена</button>
     </form>
   </div>
 
-  <div class="hide modal modal--success" id="modal-success" role="dialog" aria-labelledby="modal__title" aria-hidden="true">
-    <h2 id="modal__title" class="modal__title">Ваша заявка отправлена!</h2>
+  <div class="hide modal modal--success" id="modal-success" role="dialog" aria-labelledby="modal__title--success" aria-hidden="true">
+    <h2 id="modal__title--success" class="modal__title">Ваша заявка отправлена!</h2>
 
-    <button class="modal__btn js-btn-closed" id="close-button" type="reset">Закрыть</button>
+    <button class="modal__btn js-btn-closed" id="close-button-success" type="reset">Закрыть</button>
   </div>
 
   <div class="modal-overlay hide" id="modal-overlay"></div>
@@ -511,11 +511,7 @@
     </p>
   </footer>
 
-  <script src="js/jquery-3.4.1.min.js"></script>
-  <script src="js/owl.carousel.min.js"></script>
-  <script src="js/slider.js"></script>
-  <script src="js/just-validate.min.js"></script>
-  <script src="js/inputmask.min.js"></script>
-  <script src="js/main.js" defer></script>
+  <script src="js/vendor.min.js"></script>
+  <script src="js/main.min.js" defer></script>
 </body>
 </html>

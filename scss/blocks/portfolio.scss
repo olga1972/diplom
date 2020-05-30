@@ -47,7 +47,6 @@
 
   @media (max-width: 1023px) {
     width: 455px;
-    //margin-bottom: 35px;
   }
 
   @media (max-width: 768px) {
@@ -105,10 +104,6 @@
   @media (max-width: 1200px) {
     width: 455px;
     margin-right: 34px;
-  }
-
-  @media (max-width: 1000px) {
-    //width: 400px;
   }
 
   @media (max-width: 768px) {
@@ -170,7 +165,6 @@
   }
 
   @media (max-width: 1000px) {
-    //width: 100%;
     min-height: 275px; /*если картинка не загрузится*/
     min-width: 350px;  /*если картинка не загрузится*/
     margin-bottom: 12px;
@@ -216,8 +210,6 @@
   }
 }
 
-
-
 .controls-item__btn--prev {
   left: -30px;
   background-image: url("../../img/icons/arrow-left.png");
@@ -248,7 +240,7 @@
 
   @media (max-width: 768px) {
     width: 280px;
-    padding: 5px 0;
+    //padding: 5px 0;
   }
 }
 

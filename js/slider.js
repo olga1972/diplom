@@ -34,7 +34,7 @@ $(document).ready(function(){
       }
     });
 
-   $('.controls-item__btn.controls-item__btn--next').click(function() {
+    $('.controls-item__btn.controls-item__btn--next').click(function() {
         owl.trigger('next.owl.carousel');
     });
 

@@ -9,9 +9,6 @@
 }
 
 .main {
-  //overflow-y: scroll;
-  //scroll-behavior: smooth;
-  
   @media (max-width: 768px) {
     min-width: 320px;
     margin: 0 auto;
@@ -80,15 +77,6 @@
     margin-bottom: 92px;
   }
 
-  @media (max-width: 1023px) {
-    //justify-content: flex-start;
-    //width: 280px;
-    //margin-bottom: 34px;
-    //padding-top: 26px;
-    //padding-left: 20px;
-    //padding-right: 20px;
-  }
-
   @media (max-width: 768px) {
     justify-content: flex-start;
     width: 280px;
@@ -118,16 +106,6 @@
     margin-right: 0;
     padding-top: 93px;
     padding-right: 5px;
-  }
-
-  @media (max-width: 1023px) {
-    //flex-direction: column;
-    //flex-basis: 100%;
-    //margin-bottom: 35px;
-    //padding-top: 55px;
-    //font-size: 16px;
-    //line-height: 24px;
-    //background-size: 61px 56px;
   }
 
   @media (max-width: 768px) {

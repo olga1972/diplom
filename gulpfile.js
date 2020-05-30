@@ -1,9 +1,10 @@
 'use strict';
 
 const gulp = require('gulp');
-const webpack = require('webpack');
-const webpackStream = require('webpack-stream');
-const webpackConfig = require('./webpack.config.js');
+//const pipeline = require('readable-stream')
+const uglify = require('gulp-uglify-es').default;
+const order = require("gulp-order");
+const concat = require('gulp-concat');
 const sass = require('gulp-sass');
 const plumber = require('gulp-plumber');
 const autoprefixer = require('gulp-autoprefixer');
@@ -45,13 +46,28 @@ gulp.task('html', function () {
 
 
 gulp.task('js', function () {
-    return gulp.src('js/**/*.js')
-        .pipe(webpackStream(webpackConfig), webpack)
+    return gulp.src(['build/js/*.js', '!build/js/*.min.js'])
+        .pipe(rename({ suffix: '.min' }))
+        .pipe(uglify())
         .pipe(gulp.dest('build/js'))
         .pipe(browserSync.reload({
             stream: true
         }));
 });
+
+gulp.task('concatjs', function() {
+    return gulp.src(['build/js/*.min.js', '!build/js/main.min.js'])
+        .pipe(order([
+            'build/js/jquery-3.4.1.min.js',
+            'build/js/owl-carousel.min.js',
+            'build/js/just-validate.min.js',
+            'build/js/inputmask.min.js',
+            'build/js/slider.min.js'
+        ]))
+      .pipe(concat('vendor.js'))
+      .pipe(rename({ suffix: '.min' }))
+      .pipe(gulp.dest('build/js'));
+  });
 
 gulp.task('css', function () {
     return gulp.src('css/**/*.css')
@@ -99,11 +115,6 @@ gulp.task('images', function () {
 
 gulp.task('svg', function () {
     return gulp.src("img/**/*.svg")
-        .pipe(svgmin({
-            js2svg: {
-                pretty: true
-            }
-        }))
         .pipe(cheerio({
             run: function ($) {
                 $('[fill]').removeAttr('fill');
@@ -132,13 +143,13 @@ gulp.task('serve', function () {
 });
 
 gulp.task('copy', function () {
-   return gulp.src(['fonts/**','img/**', 'favicon/**', 'js/**', 'css/**', '*.html', '*.php', 'PHPMailer/**'], {
-            base: '.'
-        })
-            .pipe(gulp.dest('build'))
+    return gulp.src(['fonts/**','img/**', 'favicon/**', 'js/**', 'css/**', '*.html', '*.php', 'PHPMailer/**'], {
+        base: '.'
+    })
+        .pipe(gulp.dest('build'))
 });
 
-gulp.task('build', gulp.parallel('copy', 'sass', 'images', 'svg', 'rename'));
+gulp.task('build', gulp.series('copy', 'sass', 'svg', 'images', 'js', 'rename', 'concatjs'));
 
 
 
