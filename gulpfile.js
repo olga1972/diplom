@@ -13,6 +13,8 @@ const sourceMaps = require('gulp-sourcemaps');
 const imagemin = require('gulp-imagemin');
 const del = require('del');
 const svgmin = require('gulp-svgmin');
+const svgSprite = require('gulp-svg-sprite');
+//const svgSprite = require("gulp-svg-sprites");
 const cheerio = require('gulp-cheerio');
 //const replace = require('gulp-replace');
 const webp = require('gulp-webp');
@@ -115,6 +117,14 @@ gulp.task('images', function () {
 
 gulp.task('svg', function () {
     return gulp.src("img/**/*.svg")
+        /* .pipe(imagemin([
+            imagemin.svgo({
+                plugins: [
+                    {removeViewBox: true},
+                    {cleanupIDs: false}
+                ]
+            })
+        ])) */
         .pipe(cheerio({
             run: function ($) {
                 $('[fill]').removeAttr('fill');
@@ -128,19 +138,19 @@ gulp.task('svg', function () {
         .pipe(gulp.dest('build/img'));
 });
 
-gulp.task('serve', function () {
-    browserSync.init({
-        server: {
-            baseDir: 'build',
-            index: "index.html"
-          }
-    });
-    gulp.watch("scss/**/*.scss", gulp.series('sass'));
-    gulp.watch("*.html", gulp.series('html'));
-    gulp.watch("js/**/*.js", gulp.series('js'));
-    gulp.watch("img/**/*.{png,jpg,webp}", gulp.series('allimg'));
-    gulp.watch("img/**/*.{svg}", gulp.series('svg'));
+gulp.task('svgSprite', function () {
+    return gulp.src('img/icons/sprite/*.svg') // svg files for sprite
+        .pipe(svgSprite({
+                mode: {
+                    stack: {
+                        sprite: "../sprite.svg"  //sprite file name
+                    }
+                },
+            }
+        ))
+        .pipe(gulp.dest('build/img/'));
 });
+
 
 gulp.task('copy', function () {
     return gulp.src(['fonts/**','img/**', 'favicon/**', 'js/**', 'css/**', '*.html', '*.php', 'PHPMailer/**'], {
@@ -149,7 +159,9 @@ gulp.task('copy', function () {
         .pipe(gulp.dest('build'))
 });
 
-gulp.task('build', gulp.series('copy', 'sass', 'svg', 'images', 'js', 'rename', 'concatjs'));
+gulp.task('build', gulp.series('copy', 'sass', 'svg', 'images', 'svgSprite', 'js', 'rename', 'concatjs'));
+//gulp.task('build', gulp.series('copy', 'svg', 'svgSprite'));
+
 
 
 

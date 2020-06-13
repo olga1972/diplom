@@ -1,7 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="114e6b3f-3900-41c7-b636-ff19cfbb892e" name="Default Changelist" comment="" />
+    <list default="true" id="114e6b3f-3900-41c7-b636-ff19cfbb892e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/build/css/blocks/footer.css" beforeDir="false" afterPath="$PROJECT_DIR$/build/css/blocks/footer.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/css/blocks/header.css" beforeDir="false" afterPath="$PROJECT_DIR$/build/css/blocks/header.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/css/blocks/skills.css" beforeDir="false" afterPath="$PROJECT_DIR$/build/css/blocks/skills.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/build/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/css/style.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/build/css/style.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/img/icons/call-answer.svg" beforeDir="false" afterPath="$PROJECT_DIR$/build/img/icons/call-answer.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/img/icons/envelope.svg" beforeDir="false" afterPath="$PROJECT_DIR$/build/img/icons/envelope.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/js/vendor.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/js/vendor.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gulpfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/gulpfile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/icons/call-answer.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/icons/coding.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/icons/envelope.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/icons/programming.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/icons/responsive.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/icons/tools-and-utensils.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/blocks/footer.scss" beforeDir="false" afterPath="$PROJECT_DIR$/scss/blocks/footer.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/blocks/header.scss" beforeDir="false" afterPath="$PROJECT_DIR$/scss/blocks/header.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/blocks/skills.scss" beforeDir="false" afterPath="$PROJECT_DIR$/scss/blocks/skills.scss" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -34,7 +57,11 @@
       <option name="presentableId" value="Default" />
       <updated>1589270666958</updated>
       <workItem from="1589270679855" duration="15000" />
+      <workItem from="1591773868203" duration="596000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
   </component>
 </project>
