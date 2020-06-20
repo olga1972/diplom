@@ -1,5 +1,6 @@
 document.body.classList.remove('no-js');
 
+
 //Создание переменных
 
 //Элементы меню
@@ -139,17 +140,6 @@ function closeModal (e) {
     modalOverlay.classList.add('hide');
 
     document.body.classList.remove('modal-active');
-
-    //const textInputs= document.querySelectorAll('.text-input');
-    //const errorElements = document.querySelectorAll('.js-validate-error-label ');
-    //for (let i = 0; i < textInputs.length; i++) {
-        //console.log(errorElements[i]);
-        //textInputs[i].setAttribute('style','none');
-        //errorElements[i].setAttribute('style','none');
-        
-    //} 
-    
-    //classList.remove('js-validate-error-label');
 }
 
 function showModalSuccess () {
@@ -200,21 +190,7 @@ new window.JustValidate('.modal__form', {
             modal.classList.add('hide');
         });
     },
-    /* invalidFormCallback: function(e) {
-        console.log(e);
-
-        setTimeout (function() {
-            const errorLabels = document.querySelectorAll('.js-validate-error-label');
-            
-            for (let i = 0; i < errorLabels.length; i++) {
-                errorLabels[i].style.display = 'none';
-                //errorFields[i].style.border = 'auto';
-            }
-
-        }, 5000);
-
-        
-    } */
+    
 
 
 });
@@ -253,6 +229,33 @@ new window.JustValidate('.modal__form--call', {
         });
     }
 });
+
+//Swiper
+new Swiper(document.querySelector('.swiper-container'), {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    loop: true,
+    slideToClickedSlide: true,
+    pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+      },
+      navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+    },
+    breakpoints: {
+      1025: {
+        slidesPerView: 2,
+        spaceBetween: 35
+      },
+  
+          1201: {
+        slidesPerView: 3
+          }
+  
+      }
+  });
 
 
 

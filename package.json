@@ -37,6 +37,7 @@
   },
   "dependencies": {
     "gulp-rename": "^2.0.0",
-    "just-validate": "^1.5.0"
+    "just-validate": "^1.5.0",
+    "swiper": "^5.4.3"
   }
 }

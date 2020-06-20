@@ -1,7 +1,6 @@
 'use strict';
 
 const gulp = require('gulp');
-//const pipeline = require('readable-stream')
 const uglify = require('gulp-uglify-es').default;
 const order = require("gulp-order");
 const concat = require('gulp-concat');
@@ -14,13 +13,25 @@ const imagemin = require('gulp-imagemin');
 const del = require('del');
 const svgmin = require('gulp-svgmin');
 const svgSprite = require('gulp-svg-sprite');
-//const svgSprite = require("gulp-svg-sprites");
 const cheerio = require('gulp-cheerio');
-//const replace = require('gulp-replace');
 const webp = require('gulp-webp');
 const minifyCss = require('gulp-csso');
 const postHtml = require("gulp-posthtml");
 const rename = require("gulp-rename");
+const config = {
+    mode: {
+        stack: {
+            dest : '.'
+        }
+    }
+};
+gulp.task('svg-sprite', function (cb) {
+    return gulp.src('img/icons/sprite/*.svg')
+        .pipe(svgSprite(config))
+        .pipe(gulp.dest('build/img/sprites'));
+});
+
+
 
 gulp.task('sass', function () {
     return gulp.src('scss/**/*.scss')
@@ -56,20 +67,6 @@ gulp.task('js', function () {
             stream: true
         }));
 });
-
-gulp.task('concatjs', function() {
-    return gulp.src(['build/js/*.min.js', '!build/js/main.min.js'])
-        .pipe(order([
-            'build/js/jquery-3.4.1.min.js',
-            'build/js/owl-carousel.min.js',
-            'build/js/just-validate.min.js',
-            'build/js/inputmask.min.js',
-            'build/js/slider.min.js'
-        ]))
-      .pipe(concat('vendor.js'))
-      .pipe(rename({ suffix: '.min' }))
-      .pipe(gulp.dest('build/js'));
-  });
 
 gulp.task('css', function () {
     return gulp.src('css/**/*.css')
@@ -117,14 +114,6 @@ gulp.task('images', function () {
 
 gulp.task('svg', function () {
     return gulp.src("img/**/*.svg")
-        /* .pipe(imagemin([
-            imagemin.svgo({
-                plugins: [
-                    {removeViewBox: true},
-                    {cleanupIDs: false}
-                ]
-            })
-        ])) */
         .pipe(cheerio({
             run: function ($) {
                 $('[fill]').removeAttr('fill');
@@ -138,19 +127,19 @@ gulp.task('svg', function () {
         .pipe(gulp.dest('build/img'));
 });
 
-gulp.task('svgSprite', function () {
-    return gulp.src('img/icons/sprite/*.svg') // svg files for sprite
-        .pipe(svgSprite({
-                mode: {
-                    stack: {
-                        sprite: "../sprite.svg"  //sprite file name
-                    }
-                },
-            }
-        ))
-        .pipe(gulp.dest('build/img/'));
+gulp.task('serve', function () {
+    browserSync.init({
+        server: {
+            baseDir: 'build',
+            index: "index.html"
+          }
+    });
+    gulp.watch("scss/**/*.scss", gulp.series('sass'));
+    gulp.watch("*.html", gulp.series('html'));
+    gulp.watch("js/**/*.js", gulp.series('js'));
+    gulp.watch("img/**/*.{png,jpg,webp}", gulp.series('allimg'));
+    gulp.watch("img/**/*.{svg}", gulp.series('svg'));
 });
-
 
 gulp.task('copy', function () {
     return gulp.src(['fonts/**','img/**', 'favicon/**', 'js/**', 'css/**', '*.html', '*.php', 'PHPMailer/**'], {
@@ -159,8 +148,7 @@ gulp.task('copy', function () {
         .pipe(gulp.dest('build'))
 });
 
-gulp.task('build', gulp.series('copy', 'sass', 'svg', 'images', 'svgSprite', 'js', 'rename', 'concatjs'));
-//gulp.task('build', gulp.series('copy', 'svg', 'svgSprite'));
+gulp.task('build', gulp.series('copy', 'sass', 'svg', 'images', 'js', 'rename'));
 
 
 

@@ -43,7 +43,7 @@
 }
 
 .header__elements--braces {
-  transform: translateX(137px) translateY(127px) rotate(29deg);
+  transform: translateX(145px) translateY(127px) rotate(29deg);
   font-size: 50px;
 
   @media (max-width: 1200px) {
@@ -64,7 +64,7 @@
 }
 
 .header__elements--div {
-  transform: translateX(773px) translateY(164px) rotate(-13deg);
+  transform: translateX(781px) translateY(164px) rotate(-13deg);
   font-size: 32px;
 
   @media (max-width: 1200px) {
@@ -81,7 +81,7 @@
 }
 
 .header__elements--hash {
-  transform: translateX(245px) translateY(365px) rotate(15deg);
+  transform: translateX(253px) translateY(365px) rotate(15deg);
   font-size: 60px;
 
   @media (max-width: 1760px) {
@@ -103,7 +103,7 @@
 }
 
 .header__elements--slash {
-  transform: translateX(361px) translateY(678px) rotate(-23deg);
+  transform: translateX(369px) translateY(678px) rotate(-23deg);
   font-size: 40px;
 
   @media (max-width: 1550px) {
@@ -130,7 +130,7 @@
 }
 
 .header__elements--div2 {
-  transform: translateX(955px) translateY(520px) rotate(20deg);
+  transform: translateX(963px) translateY(520px) rotate(20deg);
   font-size: 38px;
 
   @media (max-width: 1720px) {
@@ -212,7 +212,7 @@
     width: 45px;
     height: 32px;
     background: transparent;
-    background-image: urlurl("../img/icons/burger.svg");
+    background-image: url("../img/icons/burger.svg");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: 45px 32px;
@@ -372,7 +372,7 @@
     height: 26px;
     padding: 0;
     font-size: 0;
-    background-image: url("../img/sprite.svg#call");
+    background-image: url("../img/icons/call.svg");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: 11px 11px;

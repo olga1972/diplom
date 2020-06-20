@@ -10,15 +10,8 @@
   <link rel="preload" href="fonts/Roboto-medium.woff2" as="font" crossorigin>
   <link rel="preload" href="fonts/Roboto-bold.woff2" as="font" crossorigin>
   <link rel="preload" href="fonts/Roboto-black.woff2" as="font" crossorigin>
-  <link rel="preload" as="image" href="img/author-desktop.png" media="(min-width: 1201px)">
-  <link rel="preload" as="image" href="img/author-planshet.png" media="(min-width: 769px)">
-  <link rel="preload" as="image" href="img/author-mobile.png" media="(min-width: 320px)">
-  <link rel="preload" as="image" href="img/bg-ellipse.svg" media="(min-width: 1201px)">
-  <link rel="preload" as="image" href="img/ellipse.planshet.svg" media="(min-width: 769px)">
-  <link rel="preload" as="image" href="img/ellipse.mobile.svg" media="(min-width: 320px)">
-  <link rel="stylesheet" type="text/css" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" type="text/css" href="css/swiper.min.css">
   <link rel="stylesheet" type="text/css" href="css/style.min.css">
-  <link rel="stylesheet" type="text/css" href="css/svg_sprite.css">
   <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
@@ -148,209 +141,183 @@
       <div class="container">
         <h2 class="title portfolio__title">Примеры моих работ</h2>
 
+        <div class="slider-buttons">
+          <button class="swiper-button-prev"></button>
+          <button class="swiper-button-next"></button>
+        </div>
+
         <div class="slider">
-          <ul class="slider__list owl-carousel">
-            <li class="slide">
-              <figure class="slide__figure">
-                <a href="#">
-                  <picture>
-                    <source
-                      media="(min-width: 1201px)"
-                      type="image/png"
-                      srcset="
-                        img/portfolio1-desktop@1x.png">
+          <div class="swiper-container">
+            <ul class="slider__list swiper-wrapper">
+              <li class="slide swiper-slide">
+                <figure class="slide__figure">
+                  <a href="#">
+                    <picture>
+                      <source
+                        media="(min-width: 1201px)"
+                        type="image/png"
+                        srcset="
+                          img/portfolio1-desktop@1x.png">
 
-                    <source
-                      media="(min-width: 768px)"
-                      type="image/png"
-                      srcset="
-                        img/portfolio1-planshet@1x.png">
+                      <source
+                        media="(min-width: 768px)"
+                        type="image/png"
+                        srcset="
+                          img/portfolio1-planshet@1x.png">
 
-                    <source
-                      media="(min-width: 320px)"
-                      type="image/png"
-                      srcset="
-                        img/portfolio1-mobile@1x.png">
+                      <source
+                        media="(min-width: 320px)"
+                        type="image/png"
+                        srcset="
+                          img/portfolio1-mobile@1x.png">
 
-                    <source
-                      media="(min-width: 1201px)"
-                      type="image/webp"
-                      srcset="
-                        img/portfolio1-desktop@1x.webp">
+                      <source
+                        media="(min-width: 1201px)"
+                        type="image/webp"
+                        srcset="
+                          img/portfolio1-desktop@1x.webp">
 
-                    <source
-                      media="(min-width: 768px)"
-                      type="image/webp"
-                      srcset="
-                        img/portfolio1-planshet@1x.webp">
+                      <source
+                        media="(min-width: 768px)"
+                        type="image/webp"
+                        srcset="
+                          img/portfolio1-planshet@1x.webp">
 
-                    <source
-                      media="(min-width: 320px)"
-                      type="image/webp"
-                      srcset="
-                        img/portfolio1-mobile@1x.webp">
+                      <source
+                        media="(min-width: 320px)"
+                        type="image/webp"
+                        srcset="
+                          img/portfolio1-mobile@1x.webp">
 
-                    <img
-                      class="slide__img"
-                      src="img/portfolio1-desktop@1x.png"
-                      srcset="
-                        img/portfolio1-desktop@1x.png"
-                      alt="Сайт психолога Веры Антоновой">
-                  </picture>
-                </a>
+                      <img
+                        class="slide__img"
+                        src="img/portfolio1-desktop@1x.png"
+                        srcset="
+                          img/portfolio1-desktop@1x.png"
+                        alt="Сайт психолога Веры Антоновой">
+                    </picture>
+                  </a>
 
-                <figcaption class="slide__figcaption">
-                  <a class="slide__title" href="#">Сайт психолога Веры Антоновой</a>
-                </figcaption>
-              </figure>
-            </li>
+                  <figcaption class="slide__figcaption">
+                    <a class="slide__title" href="#">Сайт психолога Веры Антоновой</a>
+                  </figcaption>
+                </figure>
+              </li>
 
-            <li class="slide">
-              <figure class="slide__figure swiper-slide">
-                <a href="#">
-                  <picture>
-                    <source
-                      media="(min-width: 1201px)"
-                      type="image/png"
-                      srcset="
-                        img/portfolio2-desktop@1x.png">
+              <li class="slide swiper-slide">
+                <figure class="slide__figure">
+                  <a href="#">
+                    <picture>
+                      <source
+                        media="(min-width: 1201px)"
+                        type="image/png"
+                        srcset="
+                          img/portfolio2-desktop@1x.png">
 
-                    <source
-                      media="(min-width: 1000px)"
-                      type="image/png"
-                      srcset="
-                        img/portfolio2-planshet@1x.png">
+                      <source
+                        media="(min-width: 1000px)"
+                        type="image/png"
+                        srcset="
+                          img/portfolio2-planshet@1x.png">
 
-                    <source
-                      media="(min-width: 320px)"
-                      type="image/png"
-                      srcset="
-                        img/portfolio2-mobile@1x.png">
+                      <source
+                        media="(min-width: 320px)"
+                        type="image/png"
+                        srcset="
+                          img/portfolio2-mobile@1x.png">
 
-                    <source
-                      media="(min-width: 1201px)"
-                      type="image/webp"
-                      srcset="
-                        img/portfolio2-desktop@1x.webp">
+                      <source
+                        media="(min-width: 1201px)"
+                        type="image/webp"
+                        srcset="
+                          img/portfolio2-desktop@1x.webp">
 
-                    <source
-                      media="(min-width: 768px)"
-                      type="image/webp"
-                      srcset="
-                        img/portfolio2-planshet@1x.webp">
+                      <source
+                        media="(min-width: 768px)"
+                        type="image/webp"
+                        srcset="
+                          img/portfolio2-planshet@1x.webp">
 
-                    <source
-                      media="(min-width: 320px)"
-                      type="image/webp"
-                      srcset="
-                        img/portfolio2-mobile@1x.webp">
+                      <source
+                        media="(min-width: 320px)"
+                        type="image/webp"
+                        srcset="
+                          img/portfolio2-mobile@1x.webp">
 
-                    <img
-                      class="slide__img"
-                      src="img/portfolio2-desktop@1x.png"
-                      srcset="
-                        img/portfolio2-desktop@1x.png"
-                      alt="Сайт магазина детской одежды">
-                  </picture>
-                </a>
+                      <img
+                        class="slide__img"
+                        src="img/portfolio2-desktop@1x.png"
+                        srcset="
+                          img/portfolio2-desktop@1x.png"
+                        alt="Сайт магазина детской одежды">
+                    </picture>
+                  </a>
 
-                <figcaption class="slide__figcaption">
-                  <a class="slide__title" href="#">Сайт магазина детской одежды</a>
-                </figcaption>
-              </figure>
-            </li>
+                  <figcaption class="slide__figcaption">
+                    <a class="slide__title" href="#">Сайт магазина детской одежды</a>
+                  </figcaption>
+                </figure>
+              </li>
 
-            <li class="slide">
-              <figure class="slide__figure swiper-slide">
-                <a href="#">
-                  <picture>
-                    <source
-                      media="(min-width: 1201px)"
-                      type="image/png"
-                      srcset="
-                        img/portfolio3-desktop@1x.png">
+              <li class="slide swiper-slide">
+                <figure class="slide__figure">
+                  <a href="#">
+                    <picture>
+                      <source
+                        media="(min-width: 1201px)"
+                        type="image/png"
+                        srcset="
+                          img/portfolio3-desktop@1x.png">
 
-                    <source
-                      media="(min-width: 768px)"
-                      type="image/png"
-                      srcset="
-                        img/portfolio3-planshet@1x.png">
+                      <source
+                        media="(min-width: 768px)"
+                        type="image/png"
+                        srcset="
+                          img/portfolio3-planshet@1x.png">
 
-                    <source
-                      media="(min-width: 320px)"
-                      type="image/png"
-                      srcset="
-                        img/portfolio3-mobile@1x.png">
+                      <source
+                        media="(min-width: 320px)"
+                        type="image/png"
+                        srcset="
+                          img/portfolio3-mobile@1x.png">
 
-                    <source
-                      media="(min-width: 1201px)"
-                      type="image/webp"
-                      srcset="
-                        img/portfolio3-desktop@1x.webp">
+                      <source
+                        media="(min-width: 1201px)"
+                        type="image/webp"
+                        srcset="
+                          img/portfolio3-desktop@1x.webp">
 
-                    <source
-                      media="(min-width: 768px)"
-                      type="image/webp"
-                      srcset="
-                        img/portfolio3-planshet@1x.webp">
+                      <source
+                        media="(min-width: 768px)"
+                        type="image/webp"
+                        srcset="
+                          img/portfolio3-planshet@1x.webp">
 
-                    <source
-                      media="(min-width: 320px)"
-                      type="image/webp"
-                      srcset="
-                        img/portfolio3-mobile@1x.webp">
+                      <source
+                        media="(min-width: 320px)"
+                        type="image/webp"
+                        srcset="
+                          img/portfolio3-mobile@1x.webp">
 
-                    <img
-                      class="slide__img"
-                      src="img/portfolio3-desktop@1x.png"
-                      srcset="
-                        img/portfolio3-desktop@1x.png"
-                      alt="Сайт магазина Рыболов">
-                  </picture>
-                </a>
+                      <img
+                        class="slide__img"
+                        src="img/portfolio3-desktop@1x.png"
+                        srcset="
+                          img/portfolio3-desktop@1x.png"
+                        alt="Сайт магазина Рыболов">
+                    </picture>
+                  </a>
 
-                <figcaption class="slide__figcaption">
-                  <a class="slide__title" href="#">Сайт магазина &#171;Рыболов&#187;</a>
-                </figcaption>
-              </figure>
-            </li>
-          </ul>
+                  <figcaption class="slide__figcaption">
+                    <a class="slide__title" href="#">Сайт магазина &#171;Рыболов&#187;</a>
+                  </figcaption>
+                </figure>
+              </li>
 
-          <ul class="slider__controls">
-            <li class="controls-item">
-              <button class="controls-item__btn controls-item__btn--prev" type="button" aria-label="Перейти к предыдущему слайду"></button>
-            </li>
+            </ul>
 
-            <li class="controls-item">
-              <button class="controls-item__btn controls-item__btn--next" type="button" aria-label="Перейти к следующему слайду"></button>
-            </li>
-          </ul>
-
-          <ol class="slider__pager">
-            <li class="pager-item">
-              <button class="pager-item__link pager-item__link--active"
-                type="button"
-                data-slide-to="1"
-                aria-label="Перейти к слайду номер 1">
-              </button>
-            </li>
-
-            <li class="pager-item">
-              <button class="pager-item__link"
-                type="button"
-                data-slide-to="2"
-                aria-label="Перейти к слайду номер 2">
-              </button>
-            </li>
-
-            <li class="pager-item">
-              <button class="pager-item__link"
-                type="button"
-                data-slide-to="3"
-                aria-label="Перейти к слайду номер 3">
-              </button>
-            </li>
-          </ol>
+            <div class="swiper-pagination"></div>
+          </div>
         </div>
 
         <button class="btn btn--orange portfolio__btn js-btn" type="button">Заказать проект</button>
@@ -475,6 +442,7 @@
 
       <div class="footer__social">
 
+
         <button class="btn footer__btn js-btn js-btn-call" type="button">Заказать звонок</button>
 
         <ul class="social-list">
@@ -518,8 +486,10 @@
       <small>&copy; Дмитрий Алексеев, 2016 – 2018</small>
     </p>
   </footer>
-
-  <script src="js/vendor.min.js"></script>
+  <script src="js/swiper.min.js"></script>
+  <script src="js/inputmask.min.js"></script>
+  <script src="js/just-validate.min.js"></script>
+  <script src="js/slider.min.js"></script>
   <script src="js/main.min.js" defer></script>
 </body>
 </html>

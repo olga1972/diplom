@@ -122,7 +122,7 @@
 }
 
 .contacts-item__link--phone {
-  background-image: url("../img/sprite.svg#call");
+  background-image: url("../img/icons/call.svg");
   background-position: 9px center;
   background-size: 18px 18px;
 
@@ -140,13 +140,12 @@
 
 .contacts-item__link--email{
   padding-left: 53px;
-  background-image: url("../img/sprite.svg#envelope");
-  background-position: 7px 10px;
-  background-size: 23px 15px;
+  background-image: url("../img/icons/envelope.svg");
+  background-position: 0 8px;
+  background-size: 40px 20px;
 
   @media (max-width: 1200px) {
     padding-left: 53px;
-    background-position: 7px 12px;
   }
 
   @media (max-width: 1023px) {
@@ -234,36 +233,31 @@
 
 .social-item__icon {
   display: block;
-  background-size: contain;
-  //background: url("../img/stack#social.png") no-repeat;
+  background: url("../img/icons/sprites.png") no-repeat;
 }
 
 .social-item__icon--vk {
   width: 35px;
   height: 21px;
-  //background-position: 0 -7px;
-  background: url("../img/sprite.svg#vk") no-repeat;
+  background-position: 0 -7px;
 }
 
 .social-item__icon--facebook {
   width: 16px;
   height: 28px;
-  //background-position: -38px 0;
-  background: url("../img/sprite.svg#facebook") no-repeat;
+  background-position: -38px 0;
 }
 
 .social-item__icon--twitter{
-  //background-position: -58px -3px;
+  background-position: -58px -3px;
   width: 29px;
   height: 25px;
-  background: url("../img/sprite.svg#twitter") no-repeat;
 }
 
 .social-item__icon--instagram {
   width: 25px;
   height: 25px;
-  //background-position: -91px -2px;
-  background: url("../img/sprite.svg#instagram") no-repeat;
+  background-position: -91px -2px;
 }
 
 .footer__copyright {

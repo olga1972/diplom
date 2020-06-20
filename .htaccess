@@ -9,3 +9,14 @@ RewriteCond %{REQUEST_FILENAME} -f
 RewriteRule ^(.+)$ $1 [L]
 RewriteCond %{REQUEST_URI} !(jscss/.*)!(img/.*)!(image.php.*)!(video.php.*)
 RewriteRule ^(.*)$ /index.php?rad_pr=1&request=$1
+
+AddType image/svg+xml svg svgz
+<IfModule mod_deflate.c>
+  <IfModule mod_filter.c>
+      AddOutputFilterByType DEFLATE "image/svg+xml" \
+                                    "text/css" \
+                                    "text/html" \
+                                    "text/javascript"
+                                    ... etc
+  </IfModule>
+</IfModule>
