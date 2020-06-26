@@ -12,7 +12,7 @@ new Swiper(document.querySelector('.swiper-container'), {
 		prevEl: '.swiper-button-prev',
   },
   breakpoints: {
-    1025: {
+    1024: {
       slidesPerView: 2,
       spaceBetween: 35
     },

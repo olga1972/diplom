@@ -33,7 +33,9 @@
   z-index: 1;
   transition: all 1s ease-in-out;
   line-height: 54px;
-  transform-origin: 0 0;
+  top: 0;
+  left: 50%;
+  transform-origin: 50% 0;
 }
 
 .header__elements {
@@ -43,36 +45,36 @@
 }
 
 .header__elements--braces {
-  transform: translateX(145px) translateY(127px) rotate(29deg);
+  transform: translateX(calc(50% - 840px)) translateY(140px) rotate(29deg);
   font-size: 50px;
 
+  @media (max-width: 1670px) {
+    display: none;
+  }
+
   @media (max-width: 1200px) {
-    transform: translateX(93px) translateY(150px) rotate(28deg);
+    display: block;
+    transform: translateX(calc(50% - 440px)) translateY(160px) rotate(28deg);
     font-size: 50px;
   }
 
-  @media (max-width: 768px) {
-    transform: translateX(164px) translateY(85px) rotate(30deg);
-    font-size: 36px;
+  @media (max-width: 920px) {
+    transform: translateX(calc(50% - 340px)) translateY(160px) rotate(28deg);
   }
 
-  @media (max-width: 570px) {
-    transform: translateX(64px) translateY(85px) rotate(30deg);
+  @media (max-width: 768px) {
+    transform: translateX(calc(50% - 110px)) translateY(92px) rotate(29deg);
     font-size: 26px;
   }
-
 }
 
 .header__elements--div {
-  transform: translateX(781px) translateY(164px) rotate(-13deg);
+  transform: translateX(calc(50% - 216px)) translateY(157px) rotate(-13deg);
   font-size: 32px;
 
   @media (max-width: 1200px) {
-    transform: translateX(880px) translateY(148px) rotate(-13deg);
-  }
-
-  @media (max-width: 1000px) {
-    transform: translateX(830px) translateY(148px) rotate(-13deg);
+    transform: translateX(calc(50% + 335px)) translateY(140px) rotate(-13deg);
+    font-size: 30px;
   }
 
   @media (max-width: 920px) {
@@ -81,88 +83,53 @@
 }
 
 .header__elements--hash {
-  transform: translateX(253px) translateY(365px) rotate(15deg);
+  transform: translateX(calc(50% - 723px)) translateY(368px) rotate(15deg);
   font-size: 60px;
 
-  @media (max-width: 1760px) {
-    transform: translateX(145px) translateY(580px) rotate(15deg);
-  }
-
-  @media (max-width: 1200px) {
-    transform: translateX(65px) translateY(631px) rotate(15deg);
+  @media (max-width: 1440px) {
+    display: none;
+    
   }
 
   @media (max-width: 768px) {
-    transform: translateX(144px) translateY(193px) rotate(15deg);
+    display: block;
+    transform: translateX(calc(50% - 123px)) translateY(197px) rotate(21deg);
     font-size: 30px;
-  }
-
-  @media (max-width: 570px) {
-    transform: translateX(44px) translateY(193px) rotate(15deg);
   }
 }
 
 .header__elements--slash {
-  transform: translateX(369px) translateY(678px) rotate(-23deg);
+  transform: translateX(calc(50% - 620px)) translateY(668px) rotate(-23deg);
   font-size: 40px;
 
-  @media (max-width: 1550px) {
-    transform: translateX(380px) translateY(640px) rotate(-23deg);
-  }
-
   @media (max-width: 1200px) {
-    transform: translateX(350px) translateY(592px) rotate(-23deg);
-  }
-
-  @media (max-width: 880px) {
-    transform: translateX(300px) translateY(592px) rotate(-23deg);
+    transform: translateX(calc(50% - 190px)) translateY(583px) rotate(-23deg);
   }
 
   @media (max-width: 768px) {
-    font-size: 28px;
-    transform: translateX(362px) translateY(74px) rotate(-25deg);
-  }
-
-  @media (max-width: 570px) {
     font-size: 20px;
-    transform: translateX(162px) translateY(74px) rotate(-25deg);
+    transform: translateX(calc(50% - 14px)) translateY(68px) rotate(-25deg);
   }
 }
 
 .header__elements--div2 {
-  transform: translateX(963px) translateY(520px) rotate(20deg);
+  transform: translateX(calc(50% - 45px)) translateY(538px) rotate(20deg);
   font-size: 38px;
 
-  @media (max-width: 1720px) {
-    transform: translateX(800px) translateY(520px) rotate(15deg);
+  @media (max-width: 1200px) {
+    display: block;
+    font-size: 38px;
+    transform: translateX(calc(50% + 322px)) translateY(543px) rotate(20deg);
   }
 
-  @media (max-width: 1440px) {
+  @media (max-width: 900px) {
     display: none;
   }
 
   @media (max-width: 768px) {
     display: block;
-    font-size: 20px;
-    transform: translateX(550px) translateY(123px) rotate(20deg);
-  }
-
-  @media (max-width: 630px) {
-    transform: translateX(500px) translateY(123px) rotate(20deg);
-  }
-
-  @media (max-width: 550px) {
-    transform: translateX(380px) translateY(123px) rotate(20deg);
-  }
-
-  @media (max-width: 430px) {
     font-size: 16px;
-    transform: translateX(310px) translateY(123px) rotate(20deg);
-  }
-
-  @media (max-width: 350px) {
-    font-size: 16px;
-    transform: translateX(255px) translateY(123px) rotate(20deg);
+    transform: translateX(calc(50% + 75px)) translateY(129px) rotate(20deg);
   }
 }
 
@@ -176,8 +143,9 @@
   @media (max-width: 1200px) {
     display: block;
     font-size: 44px;
-    transform: translateX(432px) translateY(223px) rotate(15deg);
+    transform: translateX(calc(50% - 112px)) translateY(232px) rotate(15deg);
   }
+  
   @media (max-width: 780px) {
     display: none;
   }
