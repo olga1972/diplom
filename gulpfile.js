@@ -59,7 +59,7 @@ gulp.task('html', function () {
 
 
 gulp.task('js', function () {
-    return gulp.src(['build/js/*.js'])
+    return gulp.src(['build/js/*.js', '!build/js/*.min.js'])
         .pipe(rename({ suffix: '.min' }))
         .pipe(uglify())
         .pipe(gulp.dest('build/js'))
