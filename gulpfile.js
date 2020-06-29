@@ -59,7 +59,7 @@ gulp.task('html', function () {
 
 
 gulp.task('js', function () {
-    return gulp.src(['build/js/*.js', '!build/js/*.min.js'])
+    return gulp.src(['build/js/*.js'])
         .pipe(rename({ suffix: '.min' }))
         .pipe(uglify())
         .pipe(gulp.dest('build/js'))
@@ -68,11 +68,17 @@ gulp.task('js', function () {
         }));
 });
 
-gulp.task('concatjs', function() {
-    return gulp.src(['build/js/swiper.min.js', 'build/js/inputmask.min.js',  'build/js/just-validate.min.js', 'build/js/slider.min.js'])
+gulp.task('concatlibsjs', function() {
+    return gulp.src(['build/js/libs/swiper.min.js', 'build/js/libs/inputmask.min.js',  'build/js/libs/just-validate.min.js', 'build/js/slider.min.js'])
       .pipe(concat('vendor.min.js'))
       .pipe(gulp.dest('build/js'));
   });
+
+gulp.task('concatjs', function() {
+return gulp.src(['build/js/navigation.min.js', 'build/js/modals.min.js','build/js/forms.min.js'])
+    .pipe(concat('main.min.js'))
+    .pipe(gulp.dest('build/js'));
+});
 
 gulp.task('css', function () {
     return gulp.src('css/**/*.css')
@@ -154,7 +160,7 @@ gulp.task('copy', function () {
         .pipe(gulp.dest('build'))
 });
 
-gulp.task('build', gulp.series('copy', 'sass', 'svg', 'images', 'js', 'rename', 'concatjs'));
+gulp.task('build', gulp.series('copy', 'sass', 'svg', 'images', 'js', 'rename', 'concatlibsjs', 'concatjs'));
 
 
 

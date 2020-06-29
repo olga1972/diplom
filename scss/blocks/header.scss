@@ -24,7 +24,6 @@
     background-position: center 174px;
     background-repeat: no-repeat;
   }
-
 }
 
 .elements {
@@ -88,7 +87,6 @@
 
   @media (max-width: 1440px) {
     display: none;
-    
   }
 
   @media (max-width: 768px) {
@@ -145,7 +143,7 @@
     font-size: 44px;
     transform: translateX(calc(50% - 112px)) translateY(232px) rotate(15deg);
   }
-  
+
   @media (max-width: 780px) {
     display: none;
   }
