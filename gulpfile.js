@@ -142,7 +142,7 @@ gulp.task('serve', function () {
 });
 
 gulp.task('copy', function () {
-    return gulp.src(['fonts/**','img/**', 'favicon/**', '*.html', '*.php', 'PHPMailer/**'], {
+    return gulp.src(['fonts/**','img/**', 'favicon/**', '*.html', 'css/style.css', '*.php', 'PHPMailer/**'], {
         base: '.'
     })
         .pipe(gulp.dest('build'))

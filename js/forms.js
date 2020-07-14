@@ -29,7 +29,6 @@ new window.JustValidate('.modal__form', {
             body: formData
         })
         .then(function(data) {
-            console.log('Отправлено');
             btnSubmitFormModal[0].addEventListener('click', closeModal);
             form.reset();
             showModalSuccess();

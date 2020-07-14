@@ -2,6 +2,7 @@
 const modals = document.querySelectorAll('.modal');
 const modalSuccess = document.querySelector('.js-modal-success');
 const modalOverlay = document.querySelector('.js-modal-overlay');
+const modalCall = document.querySelector('.js-modal-call');
 
 // Коллекция кнопок закрытия модальных окон
 const btnsClose = document.querySelectorAll('.js-btn-closed');
@@ -89,7 +90,9 @@ function closeModal () {
     modalOverlay.classList.remove('show');
     modalOverlay.classList.add('hide');
     //Сброс полей формы
-    targetParent.children[3].reset();
+    if(targetParent!=='modalSuccess') {
+        document.forms.request.reset();
+    }
 
     document.body.classList.remove('modal-active');
 }
